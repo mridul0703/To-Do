@@ -422,6 +422,13 @@ ul {
 		margin: 0 0 20px 0;
 	}
 
+	.list-header h1 {
+		font-size: 2.5rem;
+	}
+	.list-header h3 {
+		font-size: 1.2rem;
+	}
+
 	.type-buttons {
 		position: absolute;
 		left: 10px;
@@ -438,8 +445,7 @@ ul {
 	.input-task {
 		width: 82%;
 		height: 40px;
-		text-align: right;
-		padding-right: 10%;
+		padding-left: 15%;
 		font-size: 1.1rem;
 	}
 
@@ -496,5 +502,37 @@ ul {
 	.task-text {
 		font-size: 1.1rem;
 		margin-left: 8px;
+	}
+
+	.task-bg h3 {
+		display: none;
+	}
+
+	.list-topics {
+		align-items: center;
+	}
+
+	.task-bg {
+		justify-content: center;
+		padding-right: 0px;
+	}
+
+	.small-type {
+		width: 20px;
+		height: 20px;
+		margin: 0;
+	}
+
+	.profile {
+		position: relative;
+	}
+
+	.profile h1 {
+		display: none;
+	}
+
+	.progress-bar {
+		transform: rotate(-90deg);
+		width: 100px;
 	}
 }
