@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { FaPlus } from 'react-icons/fa'; // Import the plus icon from react-icons
+
+
 
 function AddTask({ newTask, handleInputChange, handleTypeChange, addTask }) {
   const [placeholder, setPlaceholder] = useState("Enter New Task");
-
   const handleFocus = () => {
     setPlaceholder("");
   };
@@ -13,7 +15,7 @@ function AddTask({ newTask, handleInputChange, handleTypeChange, addTask }) {
 
   return (
     <div className="add-task">
-      <div>
+      <div className="type-buttons" id="e1">
         <input
           type="radio"
           value="Personal"
@@ -31,6 +33,7 @@ function AddTask({ newTask, handleInputChange, handleTypeChange, addTask }) {
       </div>
       <input
         className="input-task"
+        id="e2"
         type="text"
         value={newTask.name}
         onChange={handleInputChange}
@@ -38,8 +41,8 @@ function AddTask({ newTask, handleInputChange, handleTypeChange, addTask }) {
         onFocus={handleFocus}
         onBlur={handleBlur}
       />
-      <button className="add-button" onClick={addTask}>
-        Add
+      <button className={`add-button ${window.innerWidth > 899 ? "" : "min"}`} id="e3" onClick={addTask}>
+      {window.innerWidth > 899 ? "Add" : <FaPlus />}
       </button>
     </div>
   );

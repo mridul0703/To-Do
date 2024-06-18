@@ -31,7 +31,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	overflow : hidden;
+	overflow: hidden;
 	box-sizing: border-box;
 }
 
@@ -130,6 +130,8 @@
 
 .lists {
 	width: 75%;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 	height: 100%;
 	background-color: transparent;
@@ -386,4 +388,113 @@ ul {
 	height: 1.2rem;
 	width: 1.2rem;
 	color: var(--delete-button-color);
+}
+
+@media (max-width: 899px) {
+	.main-container {
+		width: 100vw;
+		height: 100vh;
+		border-radius: 0;
+	}
+
+	.leftmenu {
+		padding: 5px;
+		width: 18%;
+		border-radius: 0;
+	}
+
+	.lists {
+		width: 82%;
+		border: none;
+	}
+
+	.list-header {
+		height: 25%;
+	}
+
+	.display-list {
+		padding: 5px;
+		width: 80vw;
+	}
+
+	.add-task {
+		position: relative;
+		margin: 0 0 20px 0;
+	}
+
+	.type-buttons {
+		position: absolute;
+		left: 10px;
+		display: flex;
+	}
+
+	.task-personal,
+	.task-office {
+		margin: 0 2px;
+		width: 17px;
+		height: 17px;
+	}
+
+	.input-task {
+		width: 82%;
+		height: 40px;
+		text-align: right;
+		padding-right: 10%;
+		font-size: 1.1rem;
+	}
+
+	.add-button.min {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+		height: 35px;
+		width: 15%;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+
+	.task-list-item {
+		width: 95%;
+		height: 40px;
+		padding: 0;
+		padding-left: 3px;
+	}
+
+	.task-type {
+		width: 12px;
+		height: 12px;
+		margin: 0 0 0 8px;
+	}
+
+	.delete-button,
+	.star-button {
+		padding: 5px;
+		cursor: pointer;
+		height: 25px;
+		width: 28px;
+		margin-right: 5px;
+	}
+
+	.icon-star,
+	.icon-del {
+		height: 1.05rem;
+		width: 1.05rem;
+	}
+
+	.task-select {
+		margin: 0 5px 0 5px;
+		width: 25px;
+		height: 25px;
+	}
+
+	.task-text {
+		font-size: 1.1rem;
+		margin-left: 8px;
+	}
 }
